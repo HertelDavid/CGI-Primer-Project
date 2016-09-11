@@ -19,4 +19,8 @@ query string has been set. If it has been set to "HTML", a page listing the path
 environment variables that were sent to the server, and the response variables sent by twitter.com is sent back as a
 response to the browser. However, if the query string is not sent, the page will not be rendered with a style sheet or 
 any formatting.
+
+Notes:
+
+The query string needs to be set as "HTML". simple.cgi?HTML.
   
