@@ -22,5 +22,6 @@ any formatting.
 
 Notes:
 
-The query string needs to be set as "HTML". simple.cgi?HTML.
+The query string needs to be set as "HTML". 
+simple.cgi?HTML.
   
