@@ -1,15 +1,30 @@
 #!/usr/bin/perl
 
 use CGI;
+use LWP 5.64;
+
+require HTTP::Headers;
 
 $query = new CGI;
 
-print $query->header;
+print $query->header();
 
-foreach my $key (sort(keys(%ENV))) {
+my $userAgent = LWP::UserAgent->new;
+my $url = "http://www.facebook.com";
 
-	print "$key = $ENV{$key}<br>\n";
+my $response = $userAgent->get($url);
+die "Failed to retrieve $url --", $response->status_line unless $response->is_success;
 
+my $head = $response->headers;
+my $headerFields = $head->header_field_names;
+
+for my $header ($head->header_field_names){
+	print $header, ": ", $response->header($header);
+	pbl();
 }
 
-print end_html;
+sub pbl{
+
+	print "<br/>";	
+
+}
