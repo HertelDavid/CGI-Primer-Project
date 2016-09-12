@@ -7,10 +7,19 @@ use Cwd 'abs_path';
 require HTTP::Headers;
 
 $query = new CGI;
+
+if($ENV{"QUERY_STRING"} eq "redirect"){
+	
+	print $query->redirect("http://google.com");
+	exit;
+
+}
+
 print $query->header(-type=>"text/html");
 
 my $userAgent = LWP::UserAgent->new;
 my $url = "http://www.twitter.com";
+my $redirect = "http://google.com";
 
 my $response = $userAgent->get($url);
 die "Failed to retrieve $url --", $response->status_line unless $response->is_success;
