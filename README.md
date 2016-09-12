@@ -11,6 +11,7 @@ Log:
 - Response to GET added
 - If the query string is "HTML", then the page will be rendered in html.
 - Provided a stylesheet for the html page that is generated under /djh73969/styles/style.css
+- Added a way to respond to a query string that equals "redirect"
 
 Summary:
 
@@ -23,5 +24,7 @@ any formatting.
 Notes:
 
 The query string needs to be set as "HTML". 
+The query string can also be set to "redirect".
 simple.cgi?HTML.
+simple.cgi?redirect
   
