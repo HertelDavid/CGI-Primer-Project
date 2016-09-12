@@ -23,8 +23,8 @@ any formatting.
 
 Notes:
 
-The query string needs to be set as "HTML". 
-The query string can also be set to "redirect".
-simple.cgi?HTML.
+The query string needs to be set as "HTML".\n
+The query string can also be set to "redirect".\n
+simple.cgi?HTML.\n
 simple.cgi?redirect
   
